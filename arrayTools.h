@@ -16,6 +16,11 @@ char *makeCharArray();
  * creates a character array of size 1 on heap, terminating it with '\0'
  */
 
+char *makeCharArrayOfSize(int n);
+/*
+ * Creates a character array of a given size n, placing a null character at the end
+ */
+
 char *pushbackChar(char **givenArray, char c);
 /*
  * Takes in the ADDRESS OF an array of characters POINTER along with the character

@@ -14,6 +14,15 @@ char *makeCharArray(){
     p[0] = '\0';
     return p;
 }
+
+//makes an array of size n
+char *makeCharArrayOfSize(int n){
+    char *p;
+    p = (char *) malloc(sizeof(char)*n);
+    p[n-1] = '\0';
+    return p;
+}
+
 //stores a given character c at the end of the given character array givenArray
 char *pushbackChar(char **givenArray, char c){
 
@@ -42,7 +51,7 @@ char *popOffChar(char **givenArray){
         for(i = 0; i < sizeOfGivenArray-1; i++){
             newArray[i] = (*givenArray)[i];
         }
-        newArray[sizeOfGivenArray] = '\0';
+        newArray[sizeOfGivenArray-1] = '\0';
         free(*givenArray);
         *givenArray = newArray;
     }
