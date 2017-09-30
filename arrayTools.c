@@ -18,8 +18,8 @@ char *makeCharArray(){
 //makes an array of size n
 char *makeCharArrayOfSize(int n){
     char *p;
-    p = (char *) malloc(sizeof(char)*n);
-    p[n-1] = '\0';
+    p = (char *) malloc(sizeof(char)*n+1);
+    p[n] = '\0';
     return p;
 }
 
